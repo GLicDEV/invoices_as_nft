@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/simple_guestbook",
+    "src/invoice_canister",
+]

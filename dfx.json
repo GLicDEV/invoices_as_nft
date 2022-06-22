@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "dfx": "0.10.0",
+  "canisters": {
+    "simple_guestbook": {
+      "type": "rust",
+      "package": "simple_guestbook",
+      "candid": "src/simple_guestbook/simple_guestbook.did"
+    },
+    "invoice_canister": {
+      "type": "rust",
+      "package": "invoice_canister",
+      "candid": "src/invoice_canister/invoice_canister.did"
+    },
+    "simple_guestbook_frontend": {
+      "dependencies": [
+        "simple_guestbook",
+        "invoice_canister"
+      ],
+      "frontend": {
+        "entrypoint": "src/simple_guestbook_frontend/src/index.html"
+      },
+      "source": [
+        "src/simple_guestbook_frontend/assets",
+        "dist/simple_guestbook_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}

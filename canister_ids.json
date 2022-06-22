@@ -1,0 +1,11 @@
+{
+  "invoice_canister": {
+    "ic": "ttkup-saaaa-aaaai-qngiq-cai"
+  },
+  "simple_guestbook": {
+    "ic": "t2j7t-eiaaa-aaaai-qngja-cai"
+  },
+  "simple_guestbook_frontend": {
+    "ic": "t5izh-jqaaa-aaaai-qngjq-cai"
+  }
+}

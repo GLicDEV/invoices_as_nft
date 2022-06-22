@@ -1,0 +1,8 @@
+type RequestStatus = variant { Empty; Paid; Pending };
+service : {
+  checkPayment : (text) -> (bool);
+  greet : (text) -> (text) query;
+  upgrade_premium : (principal) -> (opt vec nat8);
+  upgrade_ultimate : () -> (opt vec nat8);
+  verifyPayment : (text) -> (opt RequestStatus);
+}

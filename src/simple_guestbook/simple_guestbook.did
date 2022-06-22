@@ -1,0 +1,16 @@
+type GuestBookEntry = record {
+  status : UserStatus;
+  "text" : text;
+  author : principal;
+};
+type UserDetails = record { status : UserStatus; "principal" : principal };
+type UserStatus = variant { Premium; Basic; Ultimate };
+service : {
+  add : (text) -> (bool);
+  getAll : () -> (vec GuestBookEntry) query;
+  getUserDetails : () -> (UserDetails) query;
+  greet : (text) -> (text) query;
+  upgradePremium : () -> (text);
+  upgradeUltimate : () -> (bool);
+  verifyPremium : () -> (text);
+}
